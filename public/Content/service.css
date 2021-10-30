@@ -1,0 +1,98 @@
+/* COMP229Assignment1 */
+/* Student Name: Yaaseen Khan */
+/* Student Number: 301164475 */
+/* OCT/9/2021 */
+.sstitleBoard {
+    height: 350px; 
+    width: 300px; 
+    min-width: 250px;
+    padding: 1.5rem; /* border ON THE EDGE OF THE PANNAL */
+    border-radius: 50px; /* ROUNDED CORNERS */
+    box-shadow: -1rem 0 1.5rem rgb(0, 0, 0); /* ADDS 3D-CARD EFFECT  */
+    display: flex;   /* DEFINES FLEX CONTAINER */
+    flex-direction: column;    /* TOP TO BOTTOM (AUTHOR PREFIX/LOGO/NAME) */
+    scroll-snap-align: start;
+    margin: 0;
+    clear: both;
+    position: relative;
+    background: #FDC830; 
+    background: -webkit-linear-gradient(to right, #F37335, #FDC830); 
+    background: linear-gradient(to right, #F37335, #FDC830); 
+}
+
+.sboard-title p{
+    font-size: 15px;    
+    margin: .25rem 0 1rem;
+    color: #2a2a2a;
+}
+.sboard-title h2 {
+    font-size: 20px;
+    text-decoration: none;
+    color: inherit;
+    border: 0;
+    display: inline-block;
+    cursor: pointer;
+}
+#servicePic{
+    height: 325px; 
+    width: 275px; 
+    
+    border-radius: 50px;
+}
+.sboard{ 
+    width: 400px; 
+    min-width: 250px;
+    border-radius: 50px;       
+    display: flex;
+    flex-direction: column;
+    transition: .2s; /* SMOOTH TRANSITIONS */
+    margin: 0;
+    scroll-snap-align: start;
+    clear: both;
+    position: relative; 
+}
+.sboard2{ 
+    height: 325px; 
+    width: 275px; 
+    min-width: 250px;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: column;
+    transition: .2s; /* SMOOTH TRANSITIONS */
+    margin: 0;
+    scroll-snap-align: start;
+    clear: both;
+    position: relative;  
+}
+#spicc{
+    width: 400px;
+    height: 150px;
+    margin: -24px 0 0;
+    display: grid;
+    grid-template-columns: 75px 1fr;
+    align-items: center;
+    position: relative;  
+}
+.sboard3{ 
+    height: 100px; 
+    width: 100px; 
+    border-radius: 70px;
+    box-shadow: -1rem 0 3rem #000;
+    display: flex;
+    flex-direction: row;
+    transition: .2s; /* SMOOTH TRANSITIONS */
+    margin: 0;
+    scroll-snap-align: start;
+    clear: both;
+    position: relative;  
+}
+/* MOVES THE PANNEL UP WHEN HOVERED */
+.sboard3:hover {
+    transform: translateY(-1rem); 
+}
+
+#servicePic2{
+    height: 100px; 
+    width: 100px; 
+    border-radius: 50px;
+}

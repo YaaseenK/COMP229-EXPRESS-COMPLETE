@@ -1,0 +1,154 @@
+/* COMP229Assignment1 */
+/* Student Name: Yaaseen Khan */
+/* Student Number: 301164475 */
+/* OCT/9/2021 */
+
+.move{
+    height: 350px; 
+    width: 300px; 
+    min-width: 250px;
+    padding: 1.5rem; /* border ON THE EDGE OF THE PANNAL */
+    border-radius: 50px; /* ROUNDED CORNERS */
+    box-shadow: -1rem 0 1.5rem rgb(0, 0, 0); /* ADDS 3D-CARD EFFECT  */
+    display: flex;   /* DEFINES FLEX CONTAINER */
+    flex-direction: column; 
+      /* TOP TO BOTTOM (AUTHOR PREFIX/LOGO/NAME) */
+    margin-right: -18em;
+    scroll-snap-align: start;
+    clear: both;
+    position: relative;
+    background: #659999;
+    background: -webkit-linear-gradient(to right, #f4791f, #659999);
+    background: linear-gradient(to right, #f4791f, #659999);    
+}
+.pboard{ 
+    width: 400px; 
+    min-width: 250px;
+    border-radius: 50px;   
+    background: #659999;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #f4791f, #659999);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #f4791f, #659999); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    box-shadow: -1rem 0 1rem #000;
+    display: flex;
+    flex-direction: column;
+    transition: .2s; /* SMOOTH TRANSITIONS */
+    margin: 0;
+    scroll-snap-align: start;
+    clear: both;
+    position: relative; 
+}
+.pboard img{
+    margin: -24px 0 0;
+    display: grid;
+    grid-template-columns: 75px 1fr;
+    align-items: center;
+    position: relative;
+}
+#picc{
+    width: 400px;
+    height: 177px;
+}
+
+.col{
+    padding: 3rem 0 0 3rem ;
+}
+#myVideo {
+    padding: 1rem 1rem 1rem 1rem;
+    margin-bottom: auto;
+    margin-right: 3em;
+    grid-area: auto;
+    align-self: start;
+    position: relative;
+    box-sizing: border-box;
+    width: 400px;
+    border-radius: 50px;    
+  } 
+#vid{
+        padding: 3rem;
+        overflow-x: scroll;
+}
+#vid::-webkit-scrollbar-thumb {
+    background: #201c29;
+    border-radius: 10px;
+    box-shadow: inset 2px 2px 2px hsla(0,0%,100%,.25), inset -2px -2px 2px rgba(0,0,0,.25);
+} 
+#vid::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+    border-radius: 10px;
+}
+/* BOARD SECTION SCROLLBAR COLOR */
+#vid::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background: #FDC830;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #F37335, #FDC830);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #F37335, #FDC830); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.project{    
+        display: flex;
+        flex-direction: column;
+        padding: 3rem;
+        overflow-x: scroll;
+        margin-bottom: 6em;
+}
+.project::-webkit-scrollbar-thumb {
+    background: #201c29;
+    border-radius: 10px;
+    box-shadow: inset 2px 2px 2px hsla(0,0%,100%,.25), inset -2px -2px 2px rgba(0,0,0,.25);
+} 
+/* BOARD SECTION SCROLLBAR POPERTIES */
+.project::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+    border-radius: 10px;
+}
+/* BOARD SECTION SCROLLBAR COLOR */
+.project::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background: #FDC830;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #F37335, #FDC830);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #F37335, #FDC830); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.projecttags{
+    padding: .5rem 0 1rem;
+    line-height: 2;
+    margin-bottom: 0;  
+}
+.pboard-header p{
+    font-size: 15px;    
+    margin: .25rem 0 1rem;
+    color: #2a2a2a;
+}
+.projecttags a {
+    font-style: normal;
+    font-weight: 700;
+    font-size: .5rem;
+    color:  #383838;
+    text-transform: uppercase;
+    font-size: .66rem;
+    border: 3px solid #525c5c;
+    border-radius: 2rem;
+    padding: .2rem .85rem .25rem;
+    position: relative;
+    
+}
+.projecttags a:hover {
+    background: linear-gradient(90deg,#F37335, #FDC830);
+    text-shadow: none;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    
+    background-clip: text;
+    border-color: white;
+}
+
+.pboard:focus-within~.board, .board:hover~.board {
+    transform: translateX(130px);
+}  
+.pboard:hover {
+    transform: translateY(-1rem); 
+}
+.pboard:not(:first-child) {
+    margin-top: -10px;
+}

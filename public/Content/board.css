@@ -1,0 +1,293 @@
+/* COMP229Assignment1 */
+/* Student Name: Yaaseen Khan */
+/* Student Number: 301164475 */
+/* OCT/9/2021 */
+
+body{
+    padding: 0;
+    background: #2c3e50;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #3498db, #2c3e50);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #3498db, #2c3e50); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+    background-repeat:repeat;    
+    color: rgb(0, 0, 0);
+    font-family: 'DM Mono', monospace;
+}
+/* TITLE AND LOGO SECTION */
+.titleLogo{ 
+    align-items: center;
+    min-width: 350px;
+    display: flex;
+    overflow-x: scroll; 
+    padding: 2rem 15rem 2rem 17rem;
+    margin-bottom: 33px;
+    
+}
+/* TITLE AND LOGO SCROLL BAR PROPERTIES*/
+.titleLogo::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+    border-radius: 10px;
+}
+/* TITLE AND LOGO SCROLL OVERFLOW COLOR */
+.titleLogo::-webkit-scrollbar-thumb {
+    margin-top: 3rem;
+    background: #201c29;
+    border-radius: 10px;
+    box-shadow: inset 2px 2px 2px hsla(0,0%,100%,.25), inset -2px -2px 2px rgba(0,0,0,.25);
+} 
+/* TITLE AND LOGO SCROLL BAR COLOR */
+.titleLogo::-webkit-scrollbar-track {
+    
+    border-radius: 10px;
+    background: #FDC830; 
+    background: -webkit-linear-gradient(to right, #F37335, #FDC830); 
+    background: linear-gradient(to right, #F37335, #FDC830);  
+}
+/* CROWN LOGO YK */
+ .logo{
+    /* position: relative; */
+    height: 100px;
+    width: 130px;
+    -webkit-box-reflect: below -15px linear-gradient(to bottom , rgba(0,0,0,0.0),
+    rgba(0,0,0,0.4));
+     border-radius: 50%;
+    filter: grayscale(100%);
+    display: block;
+}       
+/* TITLE 3D EFFECT */
+.text{
+    grid-area: auto;
+    align-self: start;
+    box-sizing: border-box;
+    border-radius: 50%;
+    /* transform: translate(50%, 0%); */
+    position: relative;
+    text-transform: uppercase;
+    font-family: verdana;
+    font-size: 5em;
+    font-weight: 700;
+    color: #ffffff;    
+     text-shadow: 1px 1px 1px #919191,
+        1px 2px 1px #919191,
+        1px 3px 1px #919191,
+        1px 4px 1px #919191,
+        1px 5px 1px #919191,
+        1px 6px 1px #919191,
+        1px 7px 1px #919191,
+        1px 8px 1px #919191,
+        1px 9px 1px #919191,
+        1px 10px 1px #919191,
+    1px 18px 6px rgba(16,16,16,0.4),
+    1px 22px 10px rgba(16,16,16,0.2),
+    1px 25px 35px rgba(16,16,16,0.2),
+    1px 30px 60px rgba(16,16,16,0.4); 
+}
+/* DEFAULT <P> */
+p {
+    font-size: 14px;
+    margin: 0 0 1rem;
+    color: #ffffff;
+}
+/* DEDAULT <A> */
+a {
+    text-decoration: none;
+}
+/* SECTION FOR THE BOARDS*/
+ .board-list {
+    display: flex;
+    padding: 3rem;
+    overflow-x: scroll;
+    margin-bottom: 6em;
+}
+/* BOARD SECTION IF OVERFLOW IS IN EFFECT */
+.board-list::-webkit-scrollbar-thumb {
+    background: #201c29;
+    border-radius: 10px;
+    box-shadow: inset 2px 2px 2px hsla(0,0%,100%,.25), inset -2px -2px 2px rgba(0,0,0,.25);
+} 
+/* BOARD SECTION SCROLLBAR POPERTIES */
+.board-list::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+    border-radius: 10px;
+}
+/* BOARD SECTION SCROLLBAR COLOR */
+.board-list::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background: #FDC830;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #F37335, #FDC830);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #F37335, #FDC830); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+/* FIRST BOARD -- STATIC --  */
+.titleBoard {
+    height: 350px; 
+    width: 300px; 
+    min-width: 250px;
+    padding: 1.5rem; /* border ON THE EDGE OF THE PANNAL */
+    border-radius: 50px; /* ROUNDED CORNERS */
+    box-shadow: -1rem 0 1.5rem rgb(0, 0, 0); /* ADDS 3D-CARD EFFECT  */
+    display: flex;   /* DEFINES FLEX CONTAINER */
+    flex-direction: column;    /* TOP TO BOTTOM (AUTHOR PREFIX/LOGO/NAME) */
+    scroll-snap-align: start;
+    margin: 0;
+    clear: both;
+    position: relative;
+}
+/* SLIDING PANNELS -- ANIMATED --  */
+.board {
+    height: 325px; 
+    width: 275px; 
+    min-width: 250px;
+    padding: 1.5rem;
+    border-radius: 50px;
+    background: #56CCF2;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #2F80ED, #56CCF2);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #2F80ED, #56CCF2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    box-shadow: -1rem 0 3rem #000;
+    display: flex;
+    flex-direction: column;
+    transition: .2s; /* SMOOTH TRANSITIONS */
+    margin: 0;
+    scroll-snap-align: start;
+    clear: both;
+    position: relative; 
+} 
+/* MOVE OTHER PANNELS 130px TO THE RIGHT (X)*/
+ .board:focus-within~.board, .board:hover~.board {
+    transform: translateX(130px);
+}  
+/* MOVES THE PANNEL UP WHEN HOVERED */
+.board:hover {
+    transform: translateY(-1rem); 
+}
+/* MOVES ALL OTHER PANNELS CLOSER TO THE PARENT PANNEL */
+.board:not(:first-child) {
+    margin-left: -30px;
+}
+/* BASIC LAYOUT FIX */
+.board-title {
+    margin-bottom: auto;
+    margin-right: 2em;
+}
+/* p INSIDE PANNEL FORMATE */
+.board-title p {
+    font-size: 14px;    
+    margin: .25rem 0 1rem;
+    color: #ffffff;
+}
+/* a INSIDE PANNEL FORMAT */
+.board-header a{
+    color: #FDC830;    
+    text-shadow: none;
+    -webkit-background-clip: text;
+    background-clip: text;
+    border-color: white;
+    margin: 1rem 0 2rem;
+    padding: .5rem 0 1rem;
+    line-height: 2;
+}
+/* FORMATE FOR a WHEN HOVERED */
+.board-header a:hover{
+    background: white;
+    text-shadow: none;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    border-color: rgb(165, 165, 165);
+}
+/* INSIDE PANNEL H2 FORMATE */
+.board-title h2 {
+    font-size: 20px;
+    text-decoration: none;
+    color: inherit;
+    border: 0;
+    display: inline-block;
+    cursor: pointer;
+}
+/* INSIDE PANNEL H2 HOVER FORMATE */
+.board-title h2:hover {
+    background: linear-gradient(to right, #8e9eab, #eef2f3);;
+    text-shadow: none;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+/* AUTHOR SECTION */
+.author {
+    margin: -24px 0 0;
+    display: grid;
+    grid-template-columns: 75px 1fr;
+    align-items: center;
+    position: relative;
+}
+/* AUTHOR LOGO FORMATE */
+.author-avatar {
+    grid-area: auto;
+    align-self: start;
+    position: relative;
+    box-sizing: border-box;
+}
+/* AUTHOR IMAGE SETTINGS */
+.author-avatar img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    filter: grayscale(100%);
+    display: block;
+    overflow: hidden;
+    margin: 16px 10px;
+}
+/* ------------------------------------- ABOUT ME PAGE --------------------------- */
+/* MY PICTURE */
+.pic{   
+    height: 21rem;
+    width: 13rem;
+    border-radius: 50%;
+    margin: 0px 12px;
+}
+/* TAGS INSIDE PANNELS */
+.tags {
+    margin: 1rem 0 2rem;
+    padding: .5rem 0 1rem;
+    line-height: 2;
+    margin-bottom: 0;    
+}
+/*  */
+.tags a {
+    font-style: normal;
+    font-weight: 700;
+    font-size: .5rem;
+    color:  #FDC830;
+    text-transform: uppercase;
+    font-size: .66rem;
+    border: 3px solid #FDC830;
+    border-radius: 2rem;
+    padding: .5rem 1rem;
+    /* padding: .2rem .85rem .25rem; */
+    position: relative;
+}
+/*  */
+.tags a:hover {
+    background: linear-gradient(90deg,#ff8a00,#e52e71);
+    text-shadow: none;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    border-color: white;
+}
+/* ABOUT ME IN HOME PAGE */
+#nav{
+    font-style: normal;
+    font-weight: 700;
+    font-size: .5rem;
+    color:  #FDC830;
+    text-transform: uppercase;
+    font-size: 2rem;
+    border: 5px solid #FDC830;
+    border-radius: 2rem ;
+    padding: 5rem 1rem;
+    text-align: center;
+}
+/* -----------------   PRJECTS -------------  */
+/* VIDEO FOR */
